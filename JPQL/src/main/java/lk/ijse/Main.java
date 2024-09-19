@@ -56,7 +56,7 @@ public class Main {
         //join
         String jpql = "SELECT c FROM Customer c JOIN c.addresses a WHERE a.city = :city";
         TypedQuery<Customer> query = session.createQuery(jpql, Customer.class);
-        query.setParameter("city", "Colombo");  // You can replace "Colombo" with the desired city
+        query.setParameter("city", "Colombo");
         List<Customer> cust = query.getResultList();
 
         for (Customer c : cust) {
